@@ -1,0 +1,19 @@
+<div>
+    <label for="country">Country:</label>
+    <select name="country" id="country" [(ngModel)]="country" (change)="onCountryChange(country)">
+        <option value="" selected disabled>Select a Country</option>
+        @for (country of countries; track country.name) {
+            <option [value]="country.name">{{country.name}}</option>
+        }
+    </select>
+</div>
+
+<div>
+    <label for="country">State:</label>
+    <select name="state" id="state" [(ngModel)]="state">
+        <option value="" selected disabled>Select a State</option>
+        @for (state of states; track state) {
+            <option [value]="state">{{state}}</option>
+        }
+    </select>
+</div>
