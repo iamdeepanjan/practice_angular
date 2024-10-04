@@ -1,1 +1,16 @@
-<app-dropdown/>
+<app-country-dropdown (selectedCountry)="onCountrySelected($event)"/>
+@if (country) {
+    <app-state-dropdown [selectedCountry]="country" (selectedState)="onStateSelected($event)"/>
+}
+
+@if(state){
+    <app-city-dropdown [selectedCountry]="country" [selectedState]="state" (selectedCity)="onCitySelected($event)"/>
+}
+
+@if(city){
+    <div>
+        <h3>
+            You have selected {{city}}
+        </h3>
+   </div>
+}

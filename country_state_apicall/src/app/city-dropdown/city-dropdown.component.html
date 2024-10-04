@@ -1,0 +1,10 @@
+<div class="dropdown-container">
+    <label for="city" class="dropdown-label">City:</label>
+    <select name="country" id="city" [(ngModel)]="city" (change)="onCityChange(city)" [disabled]="!selectedState"
+        class="dropdown-select">
+        <option value="" selected disabled>Select a City</option>
+        @for (city of cities; track city.name) {
+        <option [value]="city.name">{{city.name}}</option>
+        }
+    </select>
+</div>

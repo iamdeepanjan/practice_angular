@@ -1,0 +1,10 @@
+<div class="dropdown-container">
+    <label for="state" class="dropdown-label">State:</label>
+    <select name="country" id="state" [(ngModel)]="state" (change)="onStateChange(state)" [disabled]="!selectedCountry"
+        class="dropdown-select">
+        <option value="" selected disabled>Select a State</option>
+        @for (state of states; track state.name) {
+        <option [value]="state.iso2">{{state.name}}</option>
+        }
+    </select>
+</div>
