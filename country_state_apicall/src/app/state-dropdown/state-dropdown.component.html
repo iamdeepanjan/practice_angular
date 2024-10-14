@@ -1,6 +1,6 @@
 <div class="dropdown-container">
     <label for="state" class="dropdown-label">State:</label>
-    <select name="country" id="state" [(ngModel)]="state" (change)="onStateChange(state)" [disabled]="!selectedCountry"
+    <select name="country" id="state" [(ngModel)]="state" (change)="onStateChange(state)"
         class="dropdown-select">
         <option value="" selected disabled>Select a State</option>
         @for (state of states; track state.name) {

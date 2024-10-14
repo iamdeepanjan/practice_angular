@@ -13,8 +13,8 @@ export class CountryDropdownComponent implements OnInit {
   
   countries:any[] = [];
   country:string = "";
-  @Output()
-  selectedCountry = new EventEmitter<string>();
+  // @Output()
+  // selectedCountry = new EventEmitter<string>();
   
   private locationService = inject(LocationService);
 
@@ -24,6 +24,7 @@ export class CountryDropdownComponent implements OnInit {
 
   onCountryChange(country:string){
     console.log(country);
-    this.selectedCountry.emit(country);
+    // this.selectedCountry.emit(country);
+    this.locationService.setSelectedCountry(country);
   }
 }

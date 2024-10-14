@@ -1,4 +1,4 @@
-<app-country-dropdown (selectedCountry)="onCountrySelected($event)"/>
+<!-- <app-country-dropdown (selectedCountry)="onCountrySelected($event)"/>
 @if (country) {
     <app-state-dropdown [selectedCountry]="country" (selectedState)="onStateSelected($event)"/>
 }
@@ -13,4 +13,19 @@
             You have selected {{city}}
         </h3>
    </div>
-}
+} -->
+
+<app-country-dropdown/>
+@if (selectedCountry) {
+    <app-state-dropdown/>
+} 
+@if (selectedState){
+    <app-city-dropdown/>
+}   
+@if(selectedCity){
+    <div>
+        <h3>
+            You have selected {{selectedCity}}
+        </h3>
+   </div>
+} 
