@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(task of tasks; track task.id) {
+            <tr>
+                <td>{{task.name}}</td>
+                <td>{{task.completed ? 'Completed' : 'Pending'}}</td>
+                <td><button (click)="updateTask(task.id)">Mark As Completed</button></td>
+            </tr>
+        }
+    </tbody>    
+</table>
