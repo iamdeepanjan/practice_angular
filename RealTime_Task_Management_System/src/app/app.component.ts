@@ -14,9 +14,9 @@ import { TaskSummaryComponent } from './task-summary/task-summary.component';
 export class AppComponent {
   title = 'RealTime_Task_Management_System';
 
-  newTask:Object = {};
-  addTask($event: any) {
-    this.newTask = $event
-  }
+  // newTask:Object = {};
+  // addTask($event: any) {
+  //   this.newTask = $event
+  // }
   
 }

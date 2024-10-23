@@ -15,4 +15,9 @@ export class TaskServiceService {
   setTasks(tasks: any[]) {
     this.tasks.next(tasks);
   }
+
+  addtask(task:any){
+    const curentTask = this.tasks.value;
+    this.tasks.next([...curentTask, task])
+  }
 }

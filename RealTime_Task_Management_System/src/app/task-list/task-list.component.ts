@@ -8,11 +8,11 @@ import { TaskServiceService } from '../task-service.service';
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.css'
 })
-export class TaskListComponent implements OnInit, OnChanges {
+export class TaskListComponent implements OnInit {
 
   tasks: any[] = [];
-  @Input()
-  task:any = {};
+  // @Input()
+  // task:any = {};
   private taskService = inject(TaskServiceService);
   
   ngOnInit(): void {
@@ -21,12 +21,12 @@ export class TaskListComponent implements OnInit, OnChanges {
     });
   }
   
-  ngOnChanges(): void { 
-    if(this.task && this.task.name && this.task.id){
-      this.tasks.push(this.task);
-    }
-    this.taskService.setTasks(this.tasks);
-  }
+  // ngOnChanges(): void { 
+  //   if(this.task && this.task.name && this.task.id){
+  //     this.tasks.push(this.task);
+  //   }
+  //   this.taskService.setTasks(this.tasks);
+  // }
 
 
   updateTask(taskId: number) {

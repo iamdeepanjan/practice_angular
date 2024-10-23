@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { TaskServiceService } from '../task-service.service';
 
 @Component({
   selector: 'app-task-input',
@@ -11,8 +12,8 @@ import { FormsModule } from '@angular/forms';
 export class TaskInputComponent {
 
   taskName: string = '';
-  @Output()
-  newTask = new EventEmitter();
+  // @Output()
+  private taskService = inject(TaskServiceService);
 
   addTask(){
     if(this.taskName){
@@ -22,7 +23,8 @@ export class TaskInputComponent {
         completed: false
       }
       console.log(newTask);
-      this.newTask.emit(newTask);
+      this.taskService.addtask(newTask);
+      // this.newTask.emit(newTask);
       this.taskName = '';
     }
   }
