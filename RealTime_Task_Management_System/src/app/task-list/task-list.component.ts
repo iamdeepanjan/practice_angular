@@ -21,14 +21,6 @@ export class TaskListComponent implements OnInit {
     });
   }
   
-  // ngOnChanges(): void { 
-  //   if(this.task && this.task.name && this.task.id){
-  //     this.tasks.push(this.task);
-  //   }
-  //   this.taskService.setTasks(this.tasks);
-  // }
-
-
   updateTask(taskId: number) {
     const task = this.tasks.find(task => task.id === taskId);
     if (task) {
@@ -36,5 +28,12 @@ export class TaskListComponent implements OnInit {
     }
     this.taskService.setTasks(this.tasks);
   }
+  
+  // ngOnChanges(): void { 
+  //   if(this.task && this.task.name && this.task.id){
+  //     this.tasks.push(this.task);
+  //   }
+  //   this.taskService.setTasks(this.tasks);
+  // }
 
 }
