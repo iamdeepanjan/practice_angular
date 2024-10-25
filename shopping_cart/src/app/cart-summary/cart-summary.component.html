@@ -1,0 +1,6 @@
+<div class="cart-summary">
+    <h3>Cart Summary</h3>
+    <p>Total Items: <span>{{ totalItems }}</span></p>
+    <p>Total Price: ₹<span>{{ totalPrice }}</span></p>
+    <button class="checkout-btn" (click)="checkout()" [disabled]="totalItems === 0">Checkout</button>
+</div>

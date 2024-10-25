@@ -1,0 +1,7 @@
+<h1 class="product-list-header">Products</h1>
+@for(product of products; track product.id){
+    <div class="product-list">
+        <span>{{product.name}} - ₹{{product.price}}</span>
+        <button (click)="addToCart(product)">Add To Cart</button>
+    </div>
+}    

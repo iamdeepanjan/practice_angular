@@ -1,0 +1,52 @@
+/* Product List Header */
+.product-list-header {
+    font-size: 2em;
+    color: #333;
+    /* text-align: center; */
+    margin: 20px 0 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+/* Product Item Container */
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.product-list:hover {
+    transform: scale(1.02);
+}
+
+.product-list span {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Add To Cart Button */
+.product-list button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-list button:hover {
+    background-color: #0056b3;
+}
+
+.product-list button:active {
+    background-color: #003f7f;
+}

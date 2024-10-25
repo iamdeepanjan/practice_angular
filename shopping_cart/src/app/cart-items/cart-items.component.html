@@ -1,0 +1,8 @@
+<h1 class="cart-items-header">Cart</h1>
+@for(item of cartItems; track item.id){
+    <div class="cart-list">
+        <span>{{item.name}} - ₹{{item.price}}</span>
+        <button (click)="removeFromCart(item)">Remove From Cart</button>
+    </div>
+}    
+
