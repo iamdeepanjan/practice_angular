@@ -1,0 +1,29 @@
+div {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #555;
+}
+
+p span {
+    font-weight: bold;
+    color: #007bff;
+}

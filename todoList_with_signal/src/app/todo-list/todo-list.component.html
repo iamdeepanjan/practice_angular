@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>Todo Name</th>
+            <th>Status</th>
+            <th>Action</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(todo of todos(); track todo.id) {
+            <tr>
+                <td>{{todo.title}}</td>
+                <td>{{todo.isCompleted ? 'Completed' : 'Pending'}}</td>
+                <td><button (click)="updateTodo(todo)">Mark As Completed</button></td>
+                <td><button (click)="deleteTodo(todo)" class="del">Delete</button></td>
+            </tr>
+        }
+    </tbody>    
+</table>
