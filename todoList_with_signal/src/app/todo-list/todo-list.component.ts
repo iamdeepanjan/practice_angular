@@ -13,7 +13,12 @@ export class TodoListComponent {
   private todoService = inject(TodoappService);
   todos = this.todoService.allTodos;
   updateTodo(todo:Todo){
-    todo.isCompleted = true;
+    if(!todo.isCompleted){
+      todo.isCompleted = true;
+    }
+    else{
+      todo.isCompleted = false;
+    }      
     this.todoService.updateTodo(todo)
   }
   deleteTodo(todo:Todo){

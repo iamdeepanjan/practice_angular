@@ -12,7 +12,7 @@
             <tr>
                 <td>{{todo.title}}</td>
                 <td>{{todo.isCompleted ? 'Completed' : 'Pending'}}</td>
-                <td><button (click)="updateTodo(todo)">Mark As Completed</button></td>
+                <td><button (click)="updateTodo(todo)">{{!todo.isCompleted ?'Mark As Completed':'Mark As Pending'}}</button></td>
                 <td><button (click)="deleteTodo(todo)" class="del">Delete</button></td>
             </tr>
         }
