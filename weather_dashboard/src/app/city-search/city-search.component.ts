@@ -17,8 +17,7 @@ export class CitySearchComponent {
   fetchWeatherDetails(){
     if(this.cityname){
       this.weatherService.setCity(this.cityname);
-      this.weatherService.addCity(this.cityname);
-      this.cityname = ""
+      this.cityname = "";
     }
   }
 }

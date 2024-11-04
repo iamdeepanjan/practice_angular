@@ -1,1 +1,13 @@
-<p>weather-history works!</p>
+@if(cityList.length>0){
+    <div class="search-history">
+        <h3>Serach History</h3>
+        <ul>
+            @for(city of cityList; track city){
+                <li>
+                    <span>{{city}}</span>
+                    <button (click)="onClick(city)">Click to reopen</button>
+                </li>
+            }            
+        </ul>
+    </div>
+}    

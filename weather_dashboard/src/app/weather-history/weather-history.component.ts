@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-weather-history',
@@ -7,6 +9,18 @@ import { Component } from '@angular/core';
   templateUrl: './weather-history.component.html',
   styleUrl: './weather-history.component.css'
 })
-export class WeatherHistoryComponent {
+export class WeatherHistoryComponent implements OnInit{
 
+  cityList:string[] = [];
+  private weatherService = inject(WeatherService);
+
+
+  ngOnInit(): void {
+    this.weatherService.getCityList().subscribe( list => this.cityList=list );
+  }
+
+
+  onClick(city:string){
+    this.weatherService.setCity(city);
+  }
 }

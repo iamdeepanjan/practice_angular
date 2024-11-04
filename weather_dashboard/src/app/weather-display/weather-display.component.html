@@ -1,1 +1,12 @@
-<p>weather-display works!</p>
+@if(weatherData){
+    <div class="weather-info">
+        <h2 class="city-name">{{weatherData.name}}</h2>
+        <p class="temperature">{{weatherData.main.temp | number:'1.0-0'}} °C</p>
+        <p class="description">Weather: {{weatherData.weather[0].main}}</p>
+    </div>
+} 
+@if(error){
+    <div>
+        <p class="error-message">{{error}}</p>
+    </div>
+}
