@@ -1,0 +1,8 @@
+<div class="state-dropdown">
+    <select (change)="onChangeSelectState($event)">
+        <option value="0" disabled selected>Select State</option>
+        @for(state of states; track state.id){
+            <option [value]="state.iso2">{{state.name}}</option>
+        }
+    </select>        
+</div>

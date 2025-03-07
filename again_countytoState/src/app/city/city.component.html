@@ -1,0 +1,8 @@
+<div class="city-dropdown">
+    <select (change)="onChangeSelectCity($event)">
+        <option value="0" disabled selected>Select City</option>
+        @for(city of cities; track city.id){
+            <option [value]="city.name">{{city.name}}</option>
+        }
+    </select>        
+</div>
